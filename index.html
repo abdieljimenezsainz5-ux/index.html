@@ -198,11 +198,53 @@
   }
 
   /* ===== SERVICES ===== */
-  .section{
-    padding:76px 6vw;
-    max-width:1180px;
-    margin:0 auto;
+  /* ===== HISTORIAL ===== */
+  .history-list{
+    display:flex;flex-direction:column;gap:1px;
+    background:var(--steel-line);border:1px solid var(--steel-line);
   }
+  .history-item{
+    background:var(--charcoal);
+    padding:22px 26px;
+    display:grid;
+    grid-template-columns:120px 1fr auto;
+    gap:20px;
+    align-items:center;
+  }
+  .history-item .h-date{
+    font-family:'JetBrains Mono',monospace;
+    color:var(--yellow);
+    font-size:0.85rem;
+    letter-spacing:0.03em;
+  }
+  .history-item .h-body h4{
+    font-family:'Barlow',sans-serif;
+    font-weight:700;
+    font-size:1.02rem;
+    color:var(--white);
+    margin-bottom:4px;
+  }
+  .history-item .h-body p{
+    color:#a9a8a2;
+    font-size:0.9rem;
+  }
+  .history-item .h-tag{
+    font-family:'JetBrains Mono',monospace;
+    font-size:0.68rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--black);
+    background:var(--yellow);
+    padding:6px 12px;
+    border-radius:20px;
+    white-space:nowrap;
+  }
+  @media (max-width:640px){
+    .history-item{grid-template-columns:1fr;}
+    .history-item .h-tag{justify-self:start;}
+  }
+
+  .section{padding:76px 6vw;max-width:1180px;margin:0 auto;}
   .section-head{
     margin-bottom:44px;
   }
@@ -409,8 +451,9 @@
     </div>
 
     <div class="hero-visual">
+      <div class="tag mono">CROWN · EQUIPO EN SERVICIO</div>
       <div class="forklift-scene">
-        <img src="https://images.pexels.com/photos/11500419/pexels-photo-11500419.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Montacargas en almacén" style="max-width:340px;width:100%;height:auto;display:block;border-radius:10px;filter:drop-shadow(0 10px 30px rgba(0,0,0,0.5));">
+        <img src="montacargas.jpg" alt="Montacargas Crown en almacén" style="max-width:340px;width:100%;height:auto;display:block;border-radius:10px;filter:drop-shadow(0 10px 30px rgba(0,0,0,0.5));">
       </div>
     </div>
   </section>
@@ -464,7 +507,7 @@
         <span class="num mono">04</span>
         <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4l-6 6 2.6 2.6 6-6a4 4 0 0 0 5.4-5.4Z"/></svg>
         <h3>Pruebas y reporte</h3>
-        <p>Pruebas operativas y reporte por escrito del estado del equipo, tras cada visita.</p>
+        <p>Pruebas operativas y reporte digital del estado del equipo, tras cada visita.</p>
       </div>
     </div>
 
@@ -475,6 +518,42 @@
         <p>Técnicos con experiencia específica en montacargas y patines eléctricos Crown.</p>
       </div>
       <div class="brand-plate">CROWN</div>
+    </div>
+  </section>
+
+  <div class="hazard thin"></div>
+
+  <section class="section" id="historial">
+    <div class="section-head">
+      <div class="eyebrow">Registro de servicio</div>
+      <h2>Historial de mantenimiento.</h2>
+      <p style="color:#a9a8a2;max-width:56ch;margin-top:10px;">Bitácora de las visitas realizadas a tu equipo. Se actualiza después de cada servicio.</p>
+    </div>
+    <div class="history-list">
+      <div class="history-item">
+        <div class="h-date">15 JUL 2026</div>
+        <div class="h-body">
+          <h4>Mantenimiento preventivo — Montacargas Crown</h4>
+          <p>Inspección general, revisión de batería y cargador, lubricación de mástil y cadenas.</p>
+        </div>
+        <div class="h-tag">Completado</div>
+      </div>
+      <div class="history-item">
+        <div class="h-date">02 JUN 2026</div>
+        <div class="h-body">
+          <h4>Revisión de baterías — Patín eléctrico Crown</h4>
+          <p>Verificación de carga y conexiones. Sin hallazgos, equipo operando dentro de parámetros normales.</p>
+        </div>
+        <div class="h-tag">Completado</div>
+      </div>
+      <div class="history-item">
+        <div class="h-date">20 ABR 2026</div>
+        <div class="h-body">
+          <h4>Ajuste y pruebas operativas — Montacargas Crown</h4>
+          <p>Ajuste de horquillas y pruebas de elevación. Reporte digital entregado al cliente.</p>
+        </div>
+        <div class="h-tag">Completado</div>
+      </div>
     </div>
   </section>
 
@@ -534,4 +613,4 @@
   <div class="foot-brand">MANTENIMIENTO DE MONTACARGAS · CULIACÁN, SINALOA</div>
 
 </body>
-</html>
+    </html>
